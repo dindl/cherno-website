@@ -16,7 +16,7 @@ Use that file to change:
 - dancer PNG head path
 - merch image, text, and button URL
 - partner cards and social links
-- embedded YouTube videos
+- YouTube content cards
 - team accomplishments
 - theme song title and loop setting
 - footer links and visitor counter text
@@ -45,12 +45,15 @@ The theme song is an owner/deploy-time asset. Visitors only get one mute/unmute
 toggle; they should never get play/stop controls, an upload, a picker, or a URL
 field for changing the MP3.
 
-## YouTube Embeds
+## YouTube Content
 
-Use YouTube embed URLs in config:
+Use normal YouTube watch or share URLs in config. The site renders scrollable
+thumbnail cards instead of iframes so browser embed blockers do not blank the
+content section.
 
 ```txt
-https://www.youtube.com/embed/VIDEO_ID
+https://youtu.be/VIDEO_ID
+https://www.youtube.com/watch?v=VIDEO_ID
 ```
 
 ## Run Locally

@@ -4,6 +4,43 @@ import { siteConfig } from "./config/siteConfig.js";
 const isExternalUrl = (url) => /^https?:\/\//i.test(url);
 const isInactiveUrl = (url) => !url || url === "#";
 
+const getYoutubeId = (urlString = "") => {
+  try {
+    const url = new URL(urlString);
+    const host = url.hostname.replace(/^www\./, "");
+
+    if (host === "youtu.be") {
+      return url.pathname.split("/").filter(Boolean)[0] || "";
+    }
+
+    if (host.endsWith("youtube.com")) {
+      const watchId = url.searchParams.get("v");
+      if (watchId) return watchId;
+
+      const parts = url.pathname.split("/").filter(Boolean);
+      const markerIndex = parts.findIndex((part) =>
+        ["embed", "shorts", "live"].includes(part),
+      );
+
+      if (markerIndex >= 0) return parts[markerIndex + 1] || "";
+    }
+  } catch {
+    return "";
+  }
+
+  return "";
+};
+
+const getYoutubeWatchUrl = (urlString = "") => {
+  const youtubeId = getYoutubeId(urlString);
+  return youtubeId ? `https://www.youtube.com/watch?v=${youtubeId}` : urlString;
+};
+
+const getYoutubeThumbnailUrl = (urlString = "") => {
+  const youtubeId = getYoutubeId(urlString);
+  return youtubeId ? `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg` : "";
+};
+
 function App() {
   const navItems = [
     { href: "#merch", label: siteConfig.merch.title },
@@ -382,22 +419,31 @@ function ContentSection({ config }) {
   return (
     <section className="section-block" id="content" aria-labelledby="content-title">
       <SectionHeading title={config.title} subtitle={config.subtitle} />
-      <div className="video-grid">
-        {config.videos.map((video) => (
-          <article className="video-card" key={`${video.channel}-${video.title}`}>
-            <div className="video-frame">
-              <iframe
-                src={video.youtubeEmbedUrl}
-                title={`${video.title} by ${video.channel}`}
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-            <h3>{video.title}</h3>
-            <p>{video.channel}</p>
-          </article>
-        ))}
+      <div className="video-scroll" aria-label={config.title}>
+        {config.videos.map((video) => {
+          const videoUrl = video.youtubeUrl;
+          const watchUrl = getYoutubeWatchUrl(videoUrl);
+          const thumbnailUrl = video.thumbnailSrc || getYoutubeThumbnailUrl(videoUrl);
+
+          return (
+            <article className="video-card" key={`${video.channel}-${video.title}`}>
+              <SmartLink className="video-thumb-link" href={watchUrl}>
+                <div className="video-frame">
+                  {thumbnailUrl ? (
+                    <img src={thumbnailUrl} alt="" loading="lazy" />
+                  ) : (
+                    <span className="video-fallback">VIDEO</span>
+                  )}
+                </div>
+                <div className="video-copy">
+                  <h3>{video.title}</h3>
+                  <p>{video.channel}</p>
+                  <span className="watch-label">Watch on YouTube</span>
+                </div>
+              </SmartLink>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

@@ -651,34 +651,81 @@ main {
   font-size: 0.9rem;
 }
 
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.video-scroll {
+  display: flex;
   gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 12px 12px 18px;
+  border: 4px inset var(--silver);
+  background:
+    repeating-linear-gradient(90deg, #000000, #000000 12px, #202020 12px, #202020 24px),
+    #000000;
+  scroll-snap-type: x mandatory;
 }
 
 .video-card {
-  padding: 10px;
+  flex: 0 0 calc((100% - 24px) / 3);
+  min-width: 260px;
   border: 4px ridge var(--cyan);
   background: #080808;
   color: #ffffff;
+  scroll-snap-align: start;
+}
+
+.video-thumb-link {
+  display: grid;
+  gap: 10px;
+  height: 100%;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .video-frame {
   position: relative;
+  display: block;
   overflow: hidden;
-  margin-bottom: 10px;
   border: 3px solid var(--orange);
   background: #000000;
   aspect-ratio: 16 / 9;
 }
 
-.video-frame iframe {
+.video-frame img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  object-fit: cover;
+  filter: saturate(1.2) contrast(1.04);
+}
+
+.video-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.12) 0,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+.video-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--orange-soft);
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 2.3rem;
+}
+
+.video-copy {
+  display: grid;
+  gap: 5px;
 }
 
 .video-card h3 {
@@ -691,6 +738,21 @@ main {
   color: var(--green);
   font-family: "Courier New", monospace;
   font-weight: 900;
+}
+
+.watch-label {
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
+  min-height: 30px;
+  margin-top: 6px;
+  padding: 5px 8px;
+  border: 3px outset var(--silver);
+  background: var(--orange);
+  color: var(--black);
+  font-family: "Arial Black", Impact, sans-serif;
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
 }
 
 .accomplishments-section {
@@ -904,9 +966,12 @@ main {
 @media (max-width: 920px) {
   .header-main,
   .hero-panel,
-  .hero-grid,
-  .video-grid {
+  .hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    flex-basis: calc((100% - 12px) / 2);
   }
 
   .theme-player {
@@ -957,6 +1022,11 @@ main {
   .dancer-rig {
     width: 140px;
     transform-origin: 70px 82px;
+  }
+
+  .video-card {
+    flex-basis: 86%;
+    min-width: 240px;
   }
 
   .accomplishment-card {

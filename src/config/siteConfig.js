@@ -96,33 +96,33 @@ export const siteConfig = {
       {
         title: "Minecraft Bedrock CO-OP Record",
         channel: "Chief Beef",
-        youtubeEmbedUrl: "https://youtu.be/WraI_7sTtWw?si=1-I4xE3FJ_BnuuNf",
+        youtubeUrl: "https://youtu.be/WraI_7sTtWw?si=1-I4xE3FJ_BnuuNf",
       },
       {
         title: "Awesome Song. Everybody Should Listen.",
         channel: "Nathan Fielder",
-        youtubeEmbedUrl: "https://youtu.be/XcrLSSlNZGs?si=THqnBsKdAGTUjfXw",
+        youtubeUrl: "https://youtu.be/XcrLSSlNZGs?si=THqnBsKdAGTUjfXw",
       },
       {
         title: "Classic Review. Rivals Anty Fantano.",
         channel: "Chief Beef",
-        youtubeEmbedUrl: "https://youtu.be/jBzvKY1G_x0?si=L_RzM6OSETAbGJvB",
+        youtubeUrl: "https://youtu.be/jBzvKY1G_x0?si=L_RzM6OSETAbGJvB",
       },
       {
         title: "Iron Man 3 Trailer",
         channel: "Marvel",
-        youtubeEmbedUrl: "https://youtu.be/Ke1Y3P9D0Bc?si=QcdrvzeNOoT-Kn1c",
+        youtubeUrl: "https://youtu.be/Ke1Y3P9D0Bc?si=QcdrvzeNOoT-Kn1c",
       },
       {
         title: "FORTNITE",
         channel: "Nate D",
-        youtubeEmbedUrl: "https://youtu.be/T_8IxyLH5Zc?si=GoVzRJsVKLOhaYSr",
+        youtubeUrl: "https://youtu.be/T_8IxyLH5Zc?si=GoVzRJsVKLOhaYSr",
         // https://www.youtube.com/watch?v=KM_Zmk8Jl2M
       },
       {
         title: "Skate Vlog #1",
         channel: "Zag Skateboarding",
-        youtubeEmbedUrl: "https://www.youtube.com/watch?v=KM_Zmk8Jl2M",
+        youtubeUrl: "https://www.youtube.com/watch?v=KM_Zmk8Jl2M",
       },
     ],
   },
