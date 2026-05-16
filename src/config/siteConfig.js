@@ -136,13 +136,13 @@ export const siteConfig = {
         title: "Chief of Operations Elected",
         people: "GBK901WAFFLE, HEAD of CHERNO GAMING ©",
         description:
-          "Elected their Chief of Operations. Congrats to GBK901WAFFLE. He earned his status after an awesome victory royal on Fortnite.",
+          "Elected to Chief of Operations. Congrats to GBK901WAFFLE. He earned his status after an awesome victory royal on Fortnite.",
         links: [{ label: "White House Website", url: "https://www.whitehouse.gov/" }],
       },
       {
         tag: "MASSIVE WORLD RECORD",
         title: "Bedrock CO-OP Leaderboard World Record",
-        people: "Steezzysteven and SirLANECALOT, CHERNO GAMING Partners ©",
+        people: "SteezzySteven and SirLANEcalot, CHERNO GAMING Partners ©",
         description:
           "Made a big land on the Minecraft Bedrock CO-OP leaderboard. Highest position was #16. Check out where they currently stand and watch the video of this generational record.",
         links: [
