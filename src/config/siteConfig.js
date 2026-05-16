@@ -67,7 +67,7 @@ export const siteConfig = {
         ],
       },
       {
-        name: "SirLANECALOT",
+        name: "SirLANEcalot",
         subtitle: "Minecraft Bedrock CO-OP sub 36; Clash of Clans co-leader",
         imageSrc: "/assets/images/headshots/sirlanec.png",
         imageAlt: "SirLANEcalot partner card",
