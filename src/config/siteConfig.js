@@ -24,7 +24,7 @@ export const siteConfig = {
     ],
   },
   dancer: {
-    label: "ENJOY CHERNO",
+    label: "ENJOY CHERNO! THROW HIM!",
     instruction: "drag me",
     headSrc: "/assets/images/face-cropped.png",
     headAlt: "😛",
