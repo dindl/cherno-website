@@ -1,7 +1,7 @@
 export const siteConfig = {
   brand: {
     name: "CHERNO GAMING",
-    logoSrc: "/assets/placeholders/C_HERNO_Offical_Logo.png",
+    logoSrc: "/assets/images/C_HERNO_Offical_Logo_Tr.png",
     logoAlt: "CHERNO GAMING horizontal logo",
     marquee:
       "WELCOME TO CHERNO GAMING !!!!!!!!!!!! WE ARE CHERNO GAMING !!!!!!!!!!!! SHOUTOUT TO OUR PARTNERS !!!!!!!!!!!!",
@@ -26,7 +26,7 @@ export const siteConfig = {
   dancer: {
     label: "ENJOY CHERNO",
     instruction: "drag me",
-    headSrc: "/assets/placeholders/face.png",
+    headSrc: "/assets/images/face-cropped.png",
     headAlt: "😛",
     nameplate: "CHERNO DANCE UNIT",
   },
@@ -35,10 +35,10 @@ export const siteConfig = {
     title: "Murchase my Purch",
     description:
       "The offical CHERNO GAMING © merch on Roblox.",
-    imageSrc: "/assets/placeholders/merch-placeholder.svg",
+    imageSrc: "/assets/images/lane-roblox-shirt.png",
     imageAlt: "CHERNO GAMING © merch preview",
     buttonText: "Enter Purch Zone",
-    url: "#",
+    url: "https://www.roblox.com/catalog/17508759915",
   },
   partnersSection: {
     title: "Thank you to the partners",
@@ -48,7 +48,7 @@ export const siteConfig = {
       {
         name: "GBK901WAFFLE",
         subtitle: "Chief of Operations, victory royal division; beast of nature",
-        imageSrc: "/assets/placeholders/headshots/cherny.png",
+        imageSrc: "/assets/images/headshots/cherny.png",
         imageAlt: "GBK901WAFFLE partner card",
         links: [
           { label: "Instagram", url: "https://www.instagram.com/c_keita_/" },
@@ -58,7 +58,7 @@ export const siteConfig = {
       {
         name: "SteezzySteven",
         subtitle: "Minecraft Bedrock CO-OP sub 36; Clash of Clans leader",
-        imageSrc: "/assets/placeholders/headshots/steezer.png",
+        imageSrc: "/assets/images/headshots/steezer.png",
         imageAlt: "SteezzySteven partner card",
         links: [
           { label: "YouTube", url: "https://www.youtube.com/@steezejunior/videos" },
@@ -69,7 +69,7 @@ export const siteConfig = {
       {
         name: "SirLANECALOT",
         subtitle: "Minecraft Bedrock CO-OP sub 36; Clash of Clans co-leader",
-        imageSrc: "/assets/placeholders/headshots/sirlanec.png",
+        imageSrc: "/assets/images/headshots/sirlanec.png",
         imageAlt: "SirLANEcalot partner card",
         links: [
           { label: "Facebook", url: "https://www.facebook.com/profile.php?id=61572951729764" },
@@ -79,7 +79,7 @@ export const siteConfig = {
       {
         name: "Hxpeaks",
         subtitle: "Roblox horror expert and heel-flip master",
-        imageSrc: "/assets/placeholders/headshots/hxpeaks.png",
+        imageSrc: "/assets/images/headshots/hxpeaks.png",
         imageAlt: "Hxpeaks partner card",
         links: [
           { label: "Instagram", url: "https://www.instagram.com/hxpeaks/" },

@@ -144,10 +144,10 @@ img {
 }
 
 .site-logo {
+  height: 160px;
   width: 100%;
-  height: 150px;
   border: 3px outset var(--silver);
-  background: var(--white);
+  background: var(--yellow);
   object-fit: contain;
   image-rendering: auto;
 }
@@ -409,8 +409,6 @@ main {
   z-index: 5;
   width: 82px;
   height: 82px;
-  border: 3px solid var(--black);
-  background: var(--white);
   object-fit: cover;
   transform-origin: 50% 78%;
   animation: head-bob 0.72s steps(2, end) infinite;
@@ -433,7 +431,7 @@ main {
   border: 4px solid var(--black);
   background:
     linear-gradient(90deg, transparent 44%, rgba(0, 0, 0, 0.35) 44%, rgba(0, 0, 0, 0.35) 56%, transparent 56%),
-    repeating-linear-gradient(0deg, var(--cyan), var(--cyan) 12px, var(--orange) 12px, var(--orange) 24px);
+    repeating-linear-gradient(0deg, var(--purple), var(--blue) 12px, var(--orange) 12px, var(--orange) 24px);
 }
 
 .arm,
@@ -981,6 +979,10 @@ main {
   .hero-panel h1 {
     font-size: 3rem;
   }
+
+  .site-logo {
+    width: 100%;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1043,5 +1045,8 @@ main {
 
   .counter span {
     width: 20px;
+  }
+  .site-logo {
+    width: 100%;
   }
 }
